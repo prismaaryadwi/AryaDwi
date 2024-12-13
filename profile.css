@@ -1,0 +1,368 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Navigation Links */
+.link {
+    position: absolute;
+    top: 20px;
+    left: 50.2%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 50px;
+    z-index: 999;
+}
+
+.link a {
+    padding: 10px 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 25px;
+    font-size: 16px;
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.link a:hover {
+    background-color: #4CAF50;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Icon Section */
+.icon {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+    z-index: 999;
+}
+
+.icon img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.icon img:hover {
+    transform: rotate(15deg) scale(1.1);
+}
+  
+
+/* Profile Container */
+.profile-container {
+    position: absolute;
+    perspective: 1000px; /* Enables 3D effect */
+    position: relative; /* Contain the profile card inside */
+    z-index: 1;
+    margin-top: 10%;
+}
+
+/* Profile Card with Parallax Effect */
+.profile-card {
+    position: relative;
+    width: 1000px;
+    height: 410px;
+    background: #20252A;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    margin-bottom: 50px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    transition: transform 0.1s ease-out;
+    z-index: 2; /* Ensure card is above other content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 5px solid #80BB51;
+    transition: transform 0.1s ease-out;
+}
+
+.profile-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #E4E8E7;
+}
+
+.profile-title {
+    font-size: 17px;
+    color: #E4E8E7;
+    margin-bottom: 15px;
+}
+
+.profile-description {
+    text-align: center;
+    font-size: 20px;
+    color: #E4E8E7;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.profile-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Social Links */
+.social-link {
+    text-decoration: none;
+    color: #fff;
+    background-color: #80BB51;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.social-link:hover {
+    background-color: #5a9e37;
+}
+
+/* Parallax Hover Effect */
+.profile-card:hover {
+    transform: scale(1.05) rotateX(0deg) rotateY(0deg); /* Apply scaling */
+}
+
+.profile-card img {
+    transform-origin: center;
+}
+
+.profile-card .profile-socials a {
+    transition: transform 0.1s ease-out;
+}
+
+/* Reset hover effect for when mouse leaves */
+.profile-card {
+    transform: rotateX(0deg) rotateY(0deg); /* Reset transformations */
+}
+
+.profile-skills {
+    position: absolute;
+    width: 96%;
+    margin: 0 auto;
+    padding:  25px 20px;
+    background-color: #1f1f1f;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 5%;
+  }
+  
+  .skills-teks {
+    font-size: 24px;
+    color: #4caf50; /* Warna hijau */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Styling setiap skill item */
+  .skills-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+  }
+  
+  .skills-item:last-child {
+    border-bottom: none;
+  }
+  
+  .skills-p {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  /* Status styling */
+  .status {
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Status Completed */
+  .status.completed {
+    background-color: #80BB51;
+    color: #E4E8E7;
+  }
+  
+  /* Status In Progress */
+  .status.in-progress {
+    background-color: #ff9800;
+    color: #ffffff;
+  }
+
+  /* Footer Styles */
+.footer {
+    position: absolute;
+    background-color: #20252A;
+    color: #E4E8E7;
+    padding: 50px 20px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 100%;
+    height: 456px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin: 10px 0;
+}
+
+.footer-section h2 {
+    font-size: 24px;
+    color: #80BB51;
+    margin-bottom: 20px;
+    padding: 0px 35px;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 25px;
+    line-height: 1.6;
+    margin-left: 5.5%;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: #E4E8E7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #80BB51;
+}
+
+.social-icons a {
+    font-size: 40px;
+    color: #E4E8E7;
+    margin-right: 5%;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #80BB51;
+}
+
+.footer-section button {
+    padding: 10px 20px;
+    background-color: #80BB51;
+    color: #E4E8E7;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-section button:hover {
+    background-color: #68A042;
+}
+
+.footer-bottom {
+    position: absolute;
+    text-align: center;
+    margin-top: 450px;
+    margin-left: 1px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    font-size: 14px;
+    color: #B0B3B8;
+}
+
+.footer-logo {
+    position: absolute;
+    margin-left: 77%;
+    margin-top: 5%;
+}
+
+.footer-logo img {
+    width: 400px;
+    height: 300px;
+}
+
+a {
+    text-decoration: none;
+}
+
+  @media (max-width: 1024px) {
+    .profile-card {
+      width: 80vw;
+      height: 60vh;
+    }
+
+    .profile-card img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .link {
+        padding: 5px 15px;
+    }
+
+    .link a {
+        font-size: 10px;
+    }
+
+    .icon img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .profile-title {
+        margin-bottom: 1%;
+        font-size: 15px;
+    }
+
+    .profile-name {
+        font-size: 15px;
+    }
+
+    .profile-description {
+        font-size: 10px;
+        margin-bottom: 2%;
+    }
+
+    .social-link {
+        font-size: 10px;
+        margin-bottom: 0%;
+    }
+}

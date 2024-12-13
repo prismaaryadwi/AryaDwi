@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <div class="circont">
+    <div class="circlex"></div>
+    <div class="circlex1"></div>
+    </div>
+    <!-- Navigation Links -->
+    <div class="link">
+        <a href="works.html">Works</a>
+        <a href="profile.html">Profile</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    
+    <!-- Icon Section -->
+    <div class="icon">
+        <a href="index.html">
+        <img src="img/icon2.png" alt="Logo">
+        </a>
+    </div>
+
+    <!-- Get in Touch Form -->
+    <div class="form-container">
+        <h2>Get in Touch</h2>
+        <p>Feel free to send me a message. I’ll get back to you as soon as possible!</p>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <!-- Replace with your Access Key -->
+            <input type="hidden" name="access_key" value="c5fb70ff-e267-49c8-b633-b8a24a3da1cd">
+    
+            <!-- Form Inputs -->
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <button type="submit">Submit Form</button>
+        </form>
+    </div>
+
+    <script>
+        // Get the profile card element
+const profileCard = document.querySelector('.form-container');
+
+// Listen for the mousemove event to track cursor position
+profileCard.addEventListener('mousemove', (e) => {
+    const cardWidth = profileCard.offsetWidth;
+    const cardHeight = profileCard.offsetHeight;
+
+    // Calculate the mouse position relative to the center of the card
+    const mouseX = e.clientX - profileCard.offsetLeft;
+    const mouseY = e.clientY - profileCard.offsetTop;
+
+    // Calculate the rotation values for X and Y axis based on the mouse position
+    const rotateX = ((mouseY / cardHeight) - 1) * -15; // Rotate by a max of 20deg on Y-axis
+    const rotateY = ((mouseX / cardWidth) - 1) * 10; // Rotate by a max of -20deg on X-axis
+
+    // Apply the rotation to the profile card
+    profileCard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+});
+
+// Reset the transform when the mouse leaves the card
+profileCard.addEventListener('mouseleave', () => {
+    profileCard.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+});
+
+    </script>
+    
+</body>
+</html>

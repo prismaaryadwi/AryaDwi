@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="link">
+        <a href="works.html">Works</a>
+        <a href="profile.html">Profile</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    
+    <div class="icon">
+        <a href="index.html">
+            <img src="img/icon2.png" alt="">
+        </a>
+    </div>
+
+    <div class="profile-container">
+        <!-- Parallax Profile Card -->
+        <div class="profile-card">
+            <img src="img/depandesign-logo1.png" alt="Profile Picture" class="profile-picture">
+            <h1 class="profile-name">Arya Dwi</h1>
+            <p class="profile-title">Junior front-End Developer</p>
+            <p class="profile-description">I am passionate about crafting visually appealing web designs and seamless user experience. Let's build something!</p>
+            <div class="profile-socials">
+                <a href="https://www.instagram.com/aryadwi_060911/" target="_blank" class="social-link">Instagram</a>
+                <a href="https://web.facebook.com/profile.php?id=61568208269701" target="_blank" class="social-link">Facebook</a>
+                <a href="https://github.com/prismaaryadwi" target="_blank" class="social-link">Github</a>
+            </div>
+        </div>
+
+        <div class="profile-skills">
+            <h1 class="skills-teks">Skills</h1>
+            <div class="skills-item">
+              <p class="skills-p">HTML & CSS</p>
+              <span class="status completed">Completed</span>
+            </div>
+            <div class="skills-item">
+              <p class="skills-p">JavaScript</p>
+              <span class="status in-progress">In progress</span>
+            </div>
+            <div class="skills-item">
+              <p class="skills-p">React.js</p>
+              <span class="status in-progress">In progress</span>
+            </div>
+            <div class="skills-item">
+              <p class="skills-p">Design Responsive</p>
+              <span class="status in-progress">In progress</span>
+            </div>
+          </div>
+          
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Tentang -->
+            <div class="footer-section about">
+                <h2>Tentang Saya</h2>
+                <p>
+                    Halo! Saya Arya Dwi, seorang Junior Front-end Developer dan desainer grafis. 
+                    Menggabungkan estetika dan fungsionalitas adalah tujuan utama saya dalam berkarya.
+                </p>
+            </div>
+    
+            <!-- Navigasi -->
+            <div class="footer-section links">
+                <h2>Navigasi</h2>
+                <ul>
+                    <li><a href="works.html">Work</a></li>
+                    <li><a href="profile.html">profile</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- Media Sosial -->
+            <div class="footer-section social">
+                <h2>Ikuti Saya</h2>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/aryadwi_060911/" target="_blank"><i class="bx bxl-instagram"></i></a>
+                    <a href="https://web.facebook.com/profile.php?id=61568208269701" target="_blank"><i class="bx bxl-facebook"></i></a>
+                    <a href="https://github.com/prismaaryadwi" target="_blank"><i class="bx bxl-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-logo">
+                <img src="img/Logo1.png" alt="">
+            </div>
+
+
+            
+            
+            
+            
+            
+            <!-- Hak Cipta -->
+            <div class="footer-bottom">
+            <p>&copy; 2024 Arya Dwi. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Get the profile card element
+const profileCard = document.querySelector('.profile-card');
+
+// Listen for the mousemove event to track cursor position
+profileCard.addEventListener('mousemove', (e) => {
+    const cardWidth = profileCard.offsetWidth;
+    const cardHeight = profileCard.offsetHeight;
+
+    // Calculate the mouse position relative to the center of the card
+    const mouseX = e.clientX - profileCard.offsetLeft;
+    const mouseY = e.clientY - profileCard.offsetTop;
+
+    // Calculate the rotation values for X and Y axis based on the mouse position
+    const rotateX = ((mouseY / cardHeight) - 1) * -15; // Rotate by a max of 20deg on Y-axis
+    const rotateY = ((mouseX / cardWidth) - 1) * 10; // Rotate by a max of -20deg on X-axis
+
+    // Apply the rotation to the profile card
+    profileCard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+});
+
+// Reset the transform when the mouse leaves the card
+profileCard.addEventListener('mouseleave', () => {
+    profileCard.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #E8F5E9, #FFFFFF);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 1000px;
+}
+
+/* Form Container Styling */
+.form-container {
+    background: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 30px 40px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+}
+
+.form-container h2 {
+    font-size: 36px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.form-container p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Input and Textarea Styling */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+    width: 92%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    background: #F9F9F9;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="email"]:focus,
+.form-container textarea:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    outline: none;
+}
+
+/* Button Styling */
+.form-container button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 18px;
+    margin-right: 58%;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 40%;
+}
+
+.form-container button:hover {
+    background-color: #45A049;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+/* Navigation Links */
+.link {
+    position: absolute;
+    top: 20px;
+    left: 50.2%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 50px;
+    z-index: 999;
+}
+
+.link a {
+    padding: 10px 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 25px;
+    font-size: 16px;
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.link a:hover {
+    background-color: #4CAF50;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Icon Section */
+.icon {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+    z-index: 999;
+}
+
+.icon img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.icon img:hover {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.circont {
+    position: absolute;
+    filter: blur(100px);
+}
+
+.circlex {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: #45A049;
+    right: 50%;
+}
+
+.circlex1 {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: #20252A;
+    left: 50%;
+}
